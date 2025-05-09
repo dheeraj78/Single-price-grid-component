@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    font-family: var(--font-family);
+    line-height: 150%;
+}
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    --font-family: "Karala",Sans-serif;
+}
+
+.wrapper {
+    min-width: 100vw;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-Gray);
+}
+
+h3 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+}
+/* utility classes */
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.btn {
+    background-color: var(--Bright-Yellow);
+    font-size: 1rem;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.263);
+    border: none;
+    outline: none;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    color: inherit;
+    font-weight: inherit;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:focus-visible {
+    outline: 3px solid rgba(219, 241, 235, 0.804);
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 0, 0.459);
+    transform: scale(1.05);
+}
+
+/* main content container in center */
+
+.wrapper__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    width: clamp(327px,60%,1200px);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.2)
+}
+
+.col1, .row1, .col2 {
+    padding: 2rem;
+}
+
+.col1, .col2 {
+    color: white;
+}
+
+.row1 {
+    background-color: white;
+}
+
+.col1 {
+    background-color: var(--Cyan);
+}
+
+.col2 {
+    background-color: hsla(179, 62%, 43%, 0.8);
+}
+
+.row1__heading--color {
+    color: var(--Cyan);
+}
+
+.row1__para1--color {
+    color: var(--Bright-Yellow);
+}
+
+.row1__para2--color {
+    color: var(--Grayish-Blue);
+}
+
+.cost {
+    padding-bottom: 0.5rem;
+}
+
+.col1__cost-size {
+    font-size: 1.5rem;
+}
+
+.col1__cost__para-color {
+    color: var(--Light-Gray);
+}
+
+
+/* media queries */
+
+@media screen and (min-width: 768px){
+   
+    .wrapper__container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .row1 {
+        grid-column: 1 / 3;
+    }
+}
