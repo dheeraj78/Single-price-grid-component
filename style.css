@@ -65,7 +65,7 @@ p {
     cursor: pointer;
     color: inherit;
     font-weight: inherit;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.s ease-in-out;
 }
 
 .btn:focus-visible {
